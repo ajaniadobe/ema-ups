@@ -1,0 +1,169 @@
+/* Hero Epoch - Figma: Epoch / Desktop / Launch / Landing */
+
+/* Tokens extracted from Figma design */
+
+.hero-epoch-container .hero-epoch-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-epoch {
+  --epoch-bg-primary: #7c8176;
+  --epoch-bg-cream: #e8e7de;
+  --epoch-text-cream: #e8e7de;
+  --epoch-text-muted: #736868;
+  --epoch-font-mono: "IBM Plex Mono", monospace;
+  --epoch-font-serif: "Libre Caslon Text", "Georgia", serif;
+  --epoch-button-radius: 8px;
+  --epoch-button-padding: 24px 24px 22px;
+  --epoch-button-tracking: -0.9px;
+  --epoch-tagline-size: 28px;
+  --epoch-tagline-leading: 32px;
+  --epoch-tagline-tracking: -1.4px;
+
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Background image - full cover */
+.hero-epoch picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+
+.hero-epoch img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Wordmark (H1) - large EPOCH text */
+.hero-epoch h1 {
+  font-family: var(--epoch-font-serif);
+  font-size: clamp(80px, 20vw, 280px);
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  color: var(--epoch-text-cream);
+  text-transform: uppercase;
+  margin: 0;
+  mix-blend-mode: normal;
+}
+
+/* Tagline text */
+.hero-epoch h2,
+.hero-epoch h3 {
+  font-family: var(--epoch-font-serif);
+  font-size: var(--epoch-tagline-size);
+  line-height: var(--epoch-tagline-leading);
+  letter-spacing: var(--epoch-tagline-tracking);
+  font-weight: 400;
+  color: var(--epoch-text-cream);
+  margin: 0;
+  max-width: 300px;
+}
+
+.hero-epoch h3 em,
+.hero-epoch h2 em {
+  font-style: italic;
+}
+
+.hero-epoch p {
+  color: var(--epoch-text-cream);
+  margin: 0;
+}
+
+/* CTA buttons container */
+.hero-epoch .button-container {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding: 0 24px 40px;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Button base */
+.hero-epoch a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-family: var(--epoch-font-mono);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: var(--epoch-button-tracking);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: var(--epoch-button-padding);
+  border-radius: var(--epoch-button-radius);
+  transition: opacity 0.2s ease;
+}
+
+.hero-epoch a:hover {
+  opacity: 0.85;
+  text-decoration: none;
+}
+
+/* Primary button (Log In) - dark olive */
+.hero-epoch p:nth-child(1) a,
+.hero-epoch .button-container a:first-child {
+  background-color: var(--epoch-bg-primary);
+  color: var(--epoch-text-cream);
+}
+
+/* Secondary button (Get Started) - cream */
+.hero-epoch p:nth-child(2) a,
+.hero-epoch .button-container a:last-child {
+  background-color: var(--epoch-bg-cream);
+  color: var(--epoch-text-muted);
+}
+
+/* Content positioning */
+.hero-epoch > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero-epoch > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex: 1;
+  width: 100%;
+  padding: 80px 24px 40px;
+  min-height: 100vh;
+}
+
+/* Buttons at the bottom */
+.hero-epoch > div:last-child > p {
+  display: contents;
+}
+
+.hero-epoch > div:last-child > p:last-child,
+.hero-epoch > div:last-child > p:nth-last-child(2) {
+  margin-top: auto;
+}
+
+@media (width >= 900px) {
+  .hero-epoch > div:last-child {
+    padding: 120px 32px 48px;
+  }
+
+  .hero-epoch h2,
+  .hero-epoch h3 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}

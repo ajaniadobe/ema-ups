@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-epoch",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-04-15T13:15:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.figma.com/design/XPEYITTw7olxQZvng7HRyu/Sample-UX?node-id=71:3305",
+    "originPage": "Epoch Desktop Launch Landing",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "brand-landing",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + wordmark heading + tagline + 2 CTAs",
+    "buttonCount": 2,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "brand landing pages",
+      "full-viewport hero sections",
+      "app launch screens"
+    ],
+    "notSuitableFor": [
+      "article headers",
+      "feature showcases",
+      "stats sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [],
+    "reuseCount": 0,
+    "lastUsed": "2026-04-15T13:15:00.000Z"
+  }
+}
