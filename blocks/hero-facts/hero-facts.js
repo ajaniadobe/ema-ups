@@ -1,1 +1,3 @@
-// Hero Facts - no JS decoration needed (CSS-only block)
+export default function decorate() {
+  // CSS-only block — no JS decoration needed
+}

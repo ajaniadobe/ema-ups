@@ -1,70 +1,51 @@
-import { getConfig } from '../../scripts/ak.js';
+export default function decorate(block) {
+  const rows = [...block.children];
+  if (rows.length === 0) return;
 
-const { log } = getConfig();
-
-function getTabList(tabs, tabPanels) {
-  const tabItems = tabs.querySelectorAll('li');
   const tabList = document.createElement('div');
   tabList.className = 'tab-list';
-  tabList.role = 'tablist';
+  tabList.setAttribute('role', 'tablist');
 
-  for (const [idx, tab] of tabItems.entries()) {
+  const panels = [];
+
+  rows.forEach((row, idx) => {
+    const cells = [...row.children];
+    const labelCell = cells[0];
+    const contentCell = cells[1];
+
+    // Create tab button
     const btn = document.createElement('button');
-    btn.role = 'tab';
+    btn.setAttribute('role', 'tab');
     btn.id = `tab-${idx + 1}`;
-    btn.textContent = tab.textContent;
-    if (idx === 0) {
-      btn.classList.add('is-active');
-      tabPanels[0].classList.add('is-visible');
-    }
+    btn.textContent = labelCell?.textContent?.trim() || `Tab ${idx + 1}`;
+    btn.setAttribute('aria-controls', `tabpanel-${idx + 1}`);
+
+    if (idx === 0) btn.classList.add('is-active');
     tabList.append(btn);
 
+    // Create tab panel
+    const panel = document.createElement('div');
+    panel.className = 'tab-panel';
+    panel.id = `tabpanel-${idx + 1}`;
+    panel.setAttribute('role', 'tabpanel');
+    panel.setAttribute('aria-labelledby', `tab-${idx + 1}`);
+
+    if (contentCell) {
+      while (contentCell.firstChild) panel.append(contentCell.firstChild);
+    }
+
+    if (idx === 0) panel.classList.add('is-visible');
+    panels.push(panel);
+
+    // Tab click handler
     btn.addEventListener('click', () => {
-      // Remove all active styles
-      tabList.querySelectorAll('button')
-        .forEach((button) => { button.classList.remove('is-active'); });
-
-      tabPanels.forEach((sec) => { sec.classList.remove('is-visible'); });
-      tabPanels[idx].classList.add('is-visible');
+      tabList.querySelectorAll('button').forEach((b) => b.classList.remove('is-active'));
+      panels.forEach((p) => p.classList.remove('is-visible'));
       btn.classList.add('is-active');
+      panel.classList.add('is-visible');
     });
-  }
+  });
 
-  return tabList;
-}
-
-export default function init(el) {
-  // Find the top most parent where all tab sections live
-  const parent = el.closest('.fragment-content, main');
-
-  // Forefully hide parent because sections may not be loaded yet
-  parent.style = 'display: none;';
-
-  // Find the section that contains the actual block
-  const currSection = el.closest('.section');
-
-  // Find the tab items
-  const tabs = el.querySelector('ul');
-  if (!tabs) {
-    log('Please add an unordered list to the advanced tabs block.');
-    return;
-  }
-
-  // Filter and format all sections that do not hold the tabs block
-  const tabPanels = [...parent.querySelectorAll(':scope > .section')]
-    .reduce((acc, section, idx) => {
-      if (section !== currSection) {
-        section.id = `tabpanel-${idx + 1}`;
-        section.role = 'tabpanel';
-        section.setAttribute('aria-labelledby', `tab-${idx + 1}`);
-        acc.push(section);
-      }
-      return acc;
-    }, []);
-
-  const tabList = getTabList(tabs, tabPanels);
-
-  tabs.remove();
-  el.append(tabList, ...tabPanels);
-  parent.removeAttribute('style');
+  block.textContent = '';
+  block.append(tabList, ...panels);
 }
