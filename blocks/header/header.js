@@ -110,9 +110,14 @@ async function decorateAction(header, pattern) {
   if (pattern === '/tools/widgets/toggle') decorateNavToggle(btn);
 }
 
-function decorateMenu() {
-  // TODO: finish single menu support
-  return null;
+function decorateMenu(li) {
+  const submenu = li.querySelector(':scope > ul');
+  if (!submenu) return null;
+  const wrapper = document.createElement('div');
+  wrapper.className = 'menu';
+  wrapper.append(submenu);
+  li.append(wrapper);
+  return wrapper;
 }
 
 function decorateMegaMenu(li) {
