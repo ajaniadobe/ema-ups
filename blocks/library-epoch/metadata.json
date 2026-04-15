@@ -1,0 +1,39 @@
+{
+  "variantName": "library-epoch",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-15T13:55:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.figma.com/design/XPEYITTw7olxQZvng7HRyu/Sample-UX?node-id=71:3424",
+    "originPage": "Epoch Scapes Library Grid",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "image-gallery",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "grid of image cards with title + category label",
+    "buttonCount": 0,
+    "imageCount": 8
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "image gallery pages",
+      "content library browsing",
+      "portfolio/collection displays"
+    ],
+    "notSuitableFor": [
+      "text-heavy card lists",
+      "pricing cards",
+      "single feature showcases"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [],
+    "reuseCount": 0,
+    "lastUsed": "2026-04-15T13:55:00.000Z"
+  }
+}

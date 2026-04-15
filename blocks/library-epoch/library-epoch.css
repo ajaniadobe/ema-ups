@@ -1,0 +1,95 @@
+/* Library Epoch - Image gallery grid adapted to UPS branding */
+
+/* Based on Figma Epoch "Scapes" library grid layout */
+
+.library-epoch > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.library-epoch > ul > li {
+  background-color: var(--color-ups-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgb(0 0 0 / 8%) 0 2px 12px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.library-epoch > ul > li:hover {
+  box-shadow: rgb(0 0 0 / 16%) 0 4px 24px;
+  transform: translateY(-2px);
+}
+
+/* First item spans full width for featured placement */
+.library-epoch > ul > li:first-child {
+  grid-column: 1 / -1;
+}
+
+.library-epoch > ul > li:first-child img {
+  aspect-ratio: 16 / 7;
+}
+
+.library-epoch .library-epoch-card-image {
+  line-height: 0;
+}
+
+.library-epoch > ul > li img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.library-epoch .library-epoch-card-body {
+  padding: 16px 20px;
+}
+
+.library-epoch .library-epoch-card-body h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0 0 4px;
+  color: var(--color-ups-dark-text);
+}
+
+.library-epoch .library-epoch-card-body h3 a {
+  color: var(--color-ups-dark-text);
+  text-decoration: none;
+}
+
+.library-epoch .library-epoch-card-body h3 a:hover {
+  color: var(--color-ups-blue);
+}
+
+.library-epoch .library-epoch-card-body p {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #636363;
+  margin: 0;
+}
+
+.library-epoch .library-epoch-card-body p:first-of-type {
+  font-size: var(--eyebrow-font-size);
+  font-weight: var(--eyebrow-font-weight);
+  letter-spacing: var(--eyebrow-letter-spacing);
+  text-transform: var(--eyebrow-text-transform);
+  color: var(--color-ups-blue);
+  margin: 0 0 8px;
+}
+
+@media (width >= 600px) {
+  .library-epoch > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .library-epoch > ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
