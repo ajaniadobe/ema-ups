@@ -28,7 +28,8 @@
       "cards-story-teaser",
       "cards-leadership",
       "columns-showcase",
-      "advanced-tabs-awards"
+      "advanced-tabs-awards",
+      "card"
     ]
   },
   {
@@ -40,7 +41,7 @@
   {
     "id": "cards",
     "components": [
-      "card"
+      "card-item"
     ]
   },
   {
@@ -67,13 +68,13 @@
   {
     "id": "cards-story-teaser",
     "components": [
-      "card"
+      "card-item"
     ]
   },
   {
     "id": "cards-leadership",
     "components": [
-      "card"
+      "card-item"
     ]
   },
   {
