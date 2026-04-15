@@ -55,10 +55,13 @@ footer {
 
   /* Middle section - link columns */
   .section:nth-child(2) {
+    margin-bottom: 48px;
+  }
+
+  .section:nth-child(2) .default-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
-    margin-bottom: 48px;
 
     strong {
       display: block;
@@ -113,7 +116,7 @@ footer {
       justify-content: center;
     }
 
-    .section:nth-child(2) {
+    .section:nth-child(2) .default-content {
       grid-template-columns: repeat(3, 1fr);
     }
 
