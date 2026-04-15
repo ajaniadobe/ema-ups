@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-story-teaser",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-14T23:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://about.ups.com/us/en/home.html",
+    "originPage": "UPS About homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "story-teaser",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "3 items: image + category tag + heading + description",
+    "buttonCount": 0,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "story/article teasers on homepages",
+      "news listing cards with categories",
+      "content cards with image and description"
+    ],
+    "notSuitableFor": [
+      "product cards with pricing",
+      "icon-based feature cards without images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/us/en/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-14T23:30:00.000Z"
+  }
+}

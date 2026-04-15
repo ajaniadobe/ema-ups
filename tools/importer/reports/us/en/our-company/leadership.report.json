@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "http://localhost:8888/us/en/our-company/leadership.html",
+  "path": "us/en/our-company/leadership",
+  "timestamp": "2026-04-15T00:28:16.238Z",
+  "title": "Leadership | About UPS",
+  "template": "corporate-page",
+  "blocks": [
+    "cards-leadership",
+    "cards-leadership"
+  ]
+}

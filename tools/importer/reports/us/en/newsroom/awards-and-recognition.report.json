@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "http://localhost:8888/us/en/newsroom/awards-and-recognition.html",
+  "path": "us/en/newsroom/awards-and-recognition",
+  "timestamp": "2026-04-15T00:28:21.220Z",
+  "title": "Awards and Recognition | About UPS",
+  "template": "newsroom-page",
+  "blocks": [
+    "cards-story-teaser",
+    "advanced-tabs-awards"
+  ]
+}

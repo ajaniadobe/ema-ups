@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "http://localhost:8888/us/en/our-stories/customer-first/a-peek-into-peak-shipping-season-at-ups.html",
+  "path": "us/en/our-stories/customer-first/a-peek-into-peak-shipping-season-at-ups",
+  "timestamp": "2026-04-15T00:28:25.464Z",
+  "title": "A peek into peak shipping season at UPS",
+  "template": "story-article",
+  "blocks": [
+    "hero-article",
+    "cards-story-teaser"
+  ]
+}

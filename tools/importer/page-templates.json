@@ -1,0 +1,284 @@
+{
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://about.ups.com/us/en/home.html"
+      ],
+      "description": "Main homepage with hero, featured content, and corporate overview",
+      "blocks": [
+        {
+          "name": "hero-featured-story",
+          "instances": [
+            ".hero.aem-GridColumn .upspr-heroimage:not(.vertical-hero)"
+          ]
+        },
+        {
+          "name": "cards-story-teaser",
+          "instances": [
+            ".pr04-threecolumnteaser .upspr-three-column-teaser"
+          ]
+        },
+        {
+          "name": "hero-facts",
+          "instances": [
+            ".hero.aem-GridColumn .vertical-hero"
+          ]
+        },
+        {
+          "name": "columns-showcase",
+          "instances": [
+            ".sectioncard .upspr-xd-card"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Headline",
+          "selector": ".headline.aem-GridColumn .upspr-headline",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".upspr-headline h1"
+          ]
+        },
+        {
+          "id": "section-2",
+          "name": "Hero Image with Story Card",
+          "selector": ".pr24-background-colour:nth-of-type(1) .hero",
+          "style": null,
+          "blocks": [
+            "hero-featured-story"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Latest Stories",
+          "selector": ".pr24-background-colour .pr04-threecolumnteaser",
+          "style": null,
+          "blocks": [
+            "cards-story-teaser"
+          ],
+          "defaultContent": [
+            ".upspr-latest-stories-cta a"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "About Us CTA",
+          "selector": ".headline.aem-GridColumn:nth-of-type(2) .upspr-headline",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".upspr-headline h4",
+            ".upspr-headline h2",
+            ".headline-cta a"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Facts and Statistics",
+          "selector": ".hero.aem-GridColumn .round-corner-hero",
+          "style": null,
+          "blocks": [
+            "hero-facts"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Our Impact Section Card",
+          "selector": ".sectioncard",
+          "style": null,
+          "blocks": [
+            "columns-showcase"
+          ],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "corporate-page",
+      "urls": [
+        "https://about.ups.com/us/en/our-company/leadership.html"
+      ],
+      "description": "Corporate information page such as leadership, company overview",
+      "blocks": [
+        {
+          "name": "cards-leadership",
+          "instances": [
+            "#executive-leadership-team .upspr-stories-list",
+            "#board-of-directors .upspr-stories-list"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Headline",
+          "selector": ".headline.aem-GridColumn .upspr-headline",
+          "style": "light-grey",
+          "blocks": [],
+          "defaultContent": [
+            ".upspr-headline h1"
+          ]
+        },
+        {
+          "id": "section-2",
+          "name": "Executive Leadership",
+          "selector": "#executive-leadership-team",
+          "style": null,
+          "blocks": [
+            "cards-leadership"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Board of Directors",
+          "selector": "#board-of-directors",
+          "style": null,
+          "blocks": [
+            "cards-leadership"
+          ],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "newsroom-page",
+      "urls": [
+        "https://about.ups.com/us/en/newsroom/awards-and-recognition.html"
+      ],
+      "description": "Newsroom listing page for awards, recognition, and news categories",
+      "blocks": [
+        {
+          "name": "cards-story-teaser",
+          "instances": [
+            ".pr04-threecolumnteaser .upspr-three-column-teaser"
+          ]
+        },
+        {
+          "name": "advanced-tabs-awards",
+          "instances": [
+            ".tabs.panelcontainer .cmp-tabs"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Headline",
+          "selector": ".headline.aem-GridColumn:first-of-type .upspr-headline",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".upspr-headline h1"
+          ]
+        },
+        {
+          "id": "section-2",
+          "name": "Featured Awards",
+          "selector": ".pr04-threecolumnteaser",
+          "style": null,
+          "blocks": [
+            "cards-story-teaser"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Awards List Heading",
+          "selector": ".headline.aem-GridColumn:nth-of-type(2) .upspr-headline",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".upspr-headline h2"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Awards Tabs",
+          "selector": ".tabs.panelcontainer",
+          "style": null,
+          "blocks": [
+            "advanced-tabs-awards"
+          ],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "search-page",
+      "urls": [
+        "https://about.ups.com/us/en/search.html?q=UPS"
+      ],
+      "description": "Site search results page",
+      "blocks": []
+    },
+    {
+      "name": "press-release",
+      "urls": [
+        "https://about.ups.com/us/en/newsroom/press-releases/financials/ups-releases-4q-2025-earnings-and-pr…"
+      ],
+      "description": "Press release article page for financial and corporate announcements",
+      "blocks": []
+    },
+    {
+      "name": "story-article",
+      "urls": [
+        "https://about.ups.com/us/en/our-stories/customer-first/a-peek-into-peak-shipping-season-at-ups.html"
+      ],
+      "description": "Long-form story article page featuring customer and company narratives",
+      "blocks": [
+        {
+          "name": "hero-article",
+          "instances": [
+            ".pr15-details .upspr-two-column_header"
+          ]
+        },
+        {
+          "name": "cards-story-teaser",
+          "instances": [
+            ".pr04-threecolumnteaser .upspr-three-column-teaser"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Article Hero",
+          "selector": ".pr15-details",
+          "style": null,
+          "blocks": [
+            "hero-article"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Article Body",
+          "selector": ".upspr-two-column_inner .par",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".cmp-text",
+            ".articleText"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Related Stories",
+          "selector": ".pr24-background-colour .pr04-threecolumnteaser",
+          "style": "light-grey",
+          "blocks": [
+            "cards-story-teaser"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

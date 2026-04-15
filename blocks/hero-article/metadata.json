@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-article",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-04-14T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://about.ups.com/us/en/our-stories/customer-first/a-peek-into-peak-shipping-season-at-ups.html",
+    "originPage": "UPS Story Article page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "article-header",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + eyebrow + heading + date + subtitle",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "story article pages with hero image",
+      "long-form content pages with eyebrow and date",
+      "editorial pages with hero header"
+    ],
+    "notSuitableFor": [
+      "homepage heroes with CTA buttons",
+      "product pages without editorial context"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/us/en/our-stories/customer-first/a-peek-into-peak-shipping-season-at-ups"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-14T00:00:00.000Z"
+  }
+}

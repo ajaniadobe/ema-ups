@@ -1,0 +1,56 @@
+.hero-facts-container .hero-facts-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-facts {
+  position: relative;
+  margin-bottom: 64px;
+}
+
+.hero-facts > div:first-child img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.hero-facts > div:last-child > div {
+  background: var(--color-ups-white);
+  padding: 32px;
+  border-radius: 8px;
+  max-width: 320px;
+}
+
+.hero-facts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-facts li {
+  text-align: center;
+  padding-bottom: 24px;
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-ups-dark-text);
+}
+
+.hero-facts strong {
+  display: block;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--color-ups-dark-text);
+}
+
+@media (width >= 900px) {
+  .hero-facts > div:last-child {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "http://localhost:8888/us/en/home.html",
+  "path": "us/en/home",
+  "timestamp": "2026-04-15T00:28:10.713Z",
+  "title": "Home | About UPS",
+  "template": "homepage",
+  "blocks": [
+    "hero-featured-story",
+    "cards-story-teaser",
+    "hero-facts",
+    "columns-showcase"
+  ]
+}
