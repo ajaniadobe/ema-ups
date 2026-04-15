@@ -1,0 +1,53 @@
+.hero-article-container .hero-article-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-article > div:first-child img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-article > div:last-child > div {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.hero-article p:first-child {
+  font-size: var(--eyebrow-font-size);
+  font-weight: var(--eyebrow-font-weight);
+  letter-spacing: var(--eyebrow-letter-spacing);
+  text-transform: var(--eyebrow-text-transform);
+  margin: 0 0 16px;
+  color: var(--color-ups-dark-text);
+}
+
+.hero-article h1 {
+  font-size: 40px;
+  line-height: 1.25;
+  font-weight: 500;
+  margin: 0 0 16px;
+}
+
+.hero-article p:nth-child(3) {
+  font-size: 13px;
+  color: #636363;
+  margin: 0 0 16px;
+}
+
+.hero-article p:last-child {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-ups-body-text);
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  .hero-article h1 {
+    font-size: 64px;
+    line-height: 80px;
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "variantName": "advanced-tabs-awards",
+  "baseBlock": "advanced-tabs",
+  "version": "1.0.0",
+  "created": "2026-04-14T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://about.ups.com/us/en/newsroom/awards-and-recognition.html",
+    "originPage": "UPS Awards & Recognition",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "standard",
+    "purpose": "year-grouped-awards",
+    "imagePattern": "none"
+  },
+  "contentPattern": {
+    "structure": "tabbed year groups with recognition items: eyebrow + title + date + description + link",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "year-grouped award listings",
+      "tabbed recognition or achievement pages",
+      "chronological content organized by year"
+    ],
+    "notSuitableFor": [
+      "image-heavy tab content",
+      "tabs with complex interactive content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/us/en/newsroom/awards-and-recognition"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-14T00:00:00.000Z"
+  }
+}

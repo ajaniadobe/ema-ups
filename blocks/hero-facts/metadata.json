@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-facts",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-04-14T23:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://about.ups.com/us/en/home.html",
+    "originPage": "UPS About homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "facts-stats",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + stats list (4 items) + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "company fact sheets with statistics",
+      "at-a-glance sections with key numbers",
+      "pages highlighting company metrics"
+    ],
+    "notSuitableFor": [
+      "text-heavy hero sections",
+      "product feature sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/us/en/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-14T23:30:00.000Z"
+  }
+}

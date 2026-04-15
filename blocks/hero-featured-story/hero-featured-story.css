@@ -1,0 +1,66 @@
+.hero-featured-story-container .hero-featured-story-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-featured-story {
+  position: relative;
+  margin-bottom: 64px;
+}
+
+.hero-featured-story > div:first-child {
+  /* Image row */
+}
+
+.hero-featured-story > div:first-child img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.hero-featured-story > div:last-child {
+  /* Content overlay */
+}
+
+.hero-featured-story > div:last-child > div {
+  background: var(--color-ups-white);
+  padding: 32px;
+  border-radius: 8px;
+  max-width: 544px;
+}
+
+.hero-featured-story h4 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 500;
+  margin: 0 0 16px;
+}
+
+.hero-featured-story p:first-child {
+  font-size: var(--eyebrow-font-size);
+  font-weight: var(--eyebrow-font-weight);
+  letter-spacing: var(--eyebrow-letter-spacing);
+  text-transform: var(--eyebrow-text-transform);
+  margin: 0 0 16px;
+  color: var(--color-ups-dark-text);
+}
+
+.hero-featured-story p {
+  margin: 0 0 16px;
+}
+
+.hero-featured-story a {
+  color: var(--color-ups-blue);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (width >= 900px) {
+  .hero-featured-story > div:last-child {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+  }
+}

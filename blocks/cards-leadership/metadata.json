@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-leadership",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-14T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://about.ups.com/us/en/our-company/leadership.html",
+    "originPage": "UPS Leadership page",
+    "blockPosition": "main"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "leadership-profiles",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "person cards: image + name (h3) + job title",
+    "buttonCount": 0,
+    "imageCount": 21
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "leadership team profiles",
+      "board of directors listings",
+      "people/team member cards with photo and title"
+    ],
+    "notSuitableFor": [
+      "story/article teasers",
+      "product cards with pricing"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/us/en/our-company/leadership"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-14T00:00:00.000Z"
+  }
+}
