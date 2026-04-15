@@ -29,7 +29,9 @@
       "cards-leadership",
       "columns-showcase",
       "advanced-tabs-awards",
-      "card"
+      "card",
+      "hero-epoch",
+      "library-epoch"
     ]
   },
   {
@@ -95,5 +97,11 @@
   {
     "id": "advanced-tabs-awards",
     "components": []
+  },
+  {
+    "id": "library-epoch",
+    "components": [
+      "library-epoch-card"
+    ]
   }
 ]
