@@ -1,4 +1,5 @@
 {
-  "type": "xwalk",
-  "contentHostUrl": "https://content.da.live/ajaniadobe/ema-ups/"
+  "type": "da",
+  "contentHostUrl": "https://content.da.live/ajaniadobe/ema-ups/",
+  "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
 }
