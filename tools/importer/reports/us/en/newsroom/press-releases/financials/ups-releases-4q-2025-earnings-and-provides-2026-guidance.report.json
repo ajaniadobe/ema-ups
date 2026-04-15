@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "http://localhost:8888/us/en/newsroom/press-releases/financials/ups-releases-4q-2025-earnings-and-provides-2026-guidance.html",
+  "path": "us/en/newsroom/press-releases/financials/ups-releases-4q-2025-earnings-and-provides-2026-guidance",
+  "timestamp": "2026-04-15T01:03:37.149Z",
+  "title": "UPS Releases 4Q 2025 Earnings And Provides 2026 Guidance",
+  "template": "press-release",
+  "blocks": [
+    "hero-article",
+    "cards-story-teaser"
+  ]
+}
