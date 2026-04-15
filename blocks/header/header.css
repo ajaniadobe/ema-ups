@@ -11,7 +11,8 @@ header {
   z-index: 1000;
   overflow: hidden;
   max-height: var(--header-height);
-  background-color: light-dark(var(--color-light), var(--color-dark));
+  background-color: var(--color-ups-white);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
 
   ul {
     margin: 0;

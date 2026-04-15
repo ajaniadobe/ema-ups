@@ -1,22 +1,21 @@
 footer {
+  background-color: var(--color-ups-brown);
+  color: var(--color-ups-white);
+
   a {
     text-decoration: none;
+    color: var(--color-ups-white);
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   .footer-content {
     max-width: var(--grid-container-width);
-    margin: 48px auto;
+    margin: 0 auto;
+    padding: 48px 24px;
     font-size: 14px;
-  }
-
-  .section-legal ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .section-copyright p {
-    margin: 0;
   }
 
   .section {
@@ -25,33 +24,107 @@ footer {
       margin: initial;
     }
   }
+
+  /* Top section - Newsroom/Careers CTAs */
+  .section:first-child {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 48px;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: var(--button-padding);
+      border: 2px solid var(--color-ups-white);
+      border-radius: var(--button-border-radius);
+      font-weight: var(--button-font-weight);
+      transition: var(--button-transition);
+    }
+
+    a:hover {
+      background-color: var(--color-ups-white);
+      color: var(--color-ups-brown);
+      text-decoration: none;
+    }
+  }
+
+  /* Middle section - link columns */
+  .section:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+
+    strong {
+      display: block;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin: 0 0 8px;
+    }
+  }
+
+  /* Legal links */
+  .section-legal {
+    margin-bottom: 24px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+    }
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      font-size: 12px;
+    }
+  }
+
+  /* Copyright */
+  .section-copyright p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.8;
+  }
 }
 
 @media (width >= 900px) {
   footer {
-    margin: 0;
+    .section:first-child {
+      justify-content: center;
+    }
+
+    .section:nth-child(2) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     .section-legal {
-      display: flex;
-      justify-content: end;
-      gap: var(--spacing-xl);
-      margin-bottom: 24px;
-
       ul {
-        display: flex;
-        justify-content: end;
-        gap: var(--spacing-xl);
-      }
-
-      li {
-        margin: 0;
+        justify-content: center;
       }
     }
 
     .section-copyright {
-      display: flex;
-      justify-content: end;
-      gap: var(--spacing-xl);
+      text-align: center;
     }
   }
 }
