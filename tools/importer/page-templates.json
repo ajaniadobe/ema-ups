@@ -221,10 +221,56 @@
     {
       "name": "press-release",
       "urls": [
-        "https://about.ups.com/us/en/newsroom/press-releases/financials/ups-releases-4q-2025-earnings-and-pr…"
+        "https://about.ups.com/us/en/newsroom/press-releases/financials/ups-releases-4q-2025-earnings-and-provides-2026-guidance.html"
       ],
       "description": "Press release article page for financial and corporate announcements",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero-article",
+          "instances": [
+            ".pr15-details .upspr-two-column_header"
+          ]
+        },
+        {
+          "name": "cards-story-teaser",
+          "instances": [
+            ".pr04-threecolumnteaser .upspr-three-column-teaser"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Article Hero",
+          "selector": ".pr15-details",
+          "style": null,
+          "blocks": [
+            "hero-article"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Article Body",
+          "selector": ".upspr-two-column_inner .par",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".cmp-text",
+            ".articleText"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Related Stories",
+          "selector": ".pr24-background-colour .pr04-threecolumnteaser",
+          "style": "light-grey",
+          "blocks": [
+            "cards-story-teaser"
+          ],
+          "defaultContent": []
+        }
+      ]
     },
     {
       "name": "story-article",
