@@ -1,0 +1,98 @@
+[
+  {
+    "id": "main",
+    "components": [
+      "section"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "accordion",
+      "cards",
+      "carousel",
+      "columns",
+      "embed",
+      "form",
+      "fragment",
+      "hero",
+      "modal",
+      "quote",
+      "search",
+      "table",
+      "tabs",
+      "video",
+      "hero-featured-story",
+      "hero-facts",
+      "hero-article",
+      "cards-story-teaser",
+      "cards-leadership",
+      "columns-showcase",
+      "advanced-tabs-awards"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
+    ]
+  },
+  {
+    "id": "cards",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
+    ]
+  },
+  {
+    "id": "table",
+    "components": [
+      "table-row",
+      "table-col-2",
+      "table-col-3",
+      "table-col-4"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabs-item"
+    ]
+  },
+  {
+    "id": "cards-story-teaser",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "cards-leadership",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "columns-showcase",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
+    "id": "advanced-tabs-awards",
+    "components": []
+  }
+]
