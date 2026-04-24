@@ -12,7 +12,7 @@ header {
   overflow: hidden;
   max-height: var(--header-height);
   background-color: var(--color-ups-white);
-  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  border-bottom: 1px solid var(--color-gray-100);
 
   ul {
     margin: 0;
@@ -97,7 +97,7 @@ header {
     }
 
     li {
-      margin-block: 12px;
+      margin-block: 0 16px;
     }
 
     ul:not(:has(+ *)) {
@@ -213,11 +213,30 @@ header {
     .main-nav-link {
       display: block;
       line-height: 64px;
+      font-family: var(--font-family);
+      font-size: var(--body-font-size-m);
+      font-weight: 700;
+      color: var(--color-ups-dark-text);
+      position: relative;
     }
 
     .menu,
     .mega-menu {
       display: none;
+    }
+
+    .menu a,
+    .mega-menu a {
+      font-family: var(--font-family);
+      font-size: var(--body-font-size-m);
+      font-weight: 500;
+      color: var(--color-ups-dark-text);
+      line-height: 1.5;
+    }
+
+    .menu a:hover,
+    .mega-menu a:hover {
+      text-decoration: underline;
     }
 
     .is-open {
@@ -261,12 +280,12 @@ header {
 
     .menu,
     .mega-menu {
-      background-color: var(--color-shaded);
-      padding: var(--spacing-xl) var(--grid-gutter-width);
+      background-color: var(--color-ups-white);
+      padding: 40px 80px 20px;
       position: absolute;
       left: 0;
       right: 0;
-      box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+      border-top: 1px solid var(--color-gray-100);
       z-index: 1000;
 
       &.language {
@@ -312,15 +331,28 @@ header {
     .main-nav-section {
       .main-nav-list {
         display: flex;
-        gap: var(--spacing-l);
+        gap: 0;
       }
 
       .main-nav-item {
         border-bottom: initial;
+        margin: 0 15px;
 
         > * {
           max-width: initial;
           margin: initial;
+        }
+
+        &.is-open .main-nav-link::after,
+        &:hover .main-nav-link::after {
+          content: "";
+          display: block;
+          height: 3px;
+          background-color: var(--color-ups-gold);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
         }
 
         &.is-open {
@@ -328,6 +360,10 @@ header {
             border-bottom: initial;
           }
         }
+      }
+
+      .main-nav-link {
+        padding: 8px 0;
       }
     }
 

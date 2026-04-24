@@ -252,6 +252,29 @@ button:focus-visible {
   background-color: var(--color-ups-light-gray);
 }
 
+/* Centered h1 headline pattern */
+main > .section:first-child > .default-content:has(> h1:only-child) {
+  text-align: center;
+  padding: 48px 0 40px;
+
+  h1 {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
+/* Gold stroke only on white-background hero sections */
+main > .section:first-child:not(.light-grey, .dark)
+  > .default-content:has(> h1:only-child) h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: rgb(255 220 64);
+  margin: 32px auto 0;
+  border-radius: 2px;
+}
+
 main {
   ul,
   ol {
