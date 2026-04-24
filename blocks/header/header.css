@@ -262,10 +262,12 @@ header {
     .menu,
     .mega-menu {
       background-color: var(--color-shaded);
-      padding: var(--spacing-xl) 0;
+      padding: var(--spacing-xl) var(--grid-gutter-width);
       position: absolute;
       left: 0;
       right: 0;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+      z-index: 1000;
 
       &.language {
         display: none;
