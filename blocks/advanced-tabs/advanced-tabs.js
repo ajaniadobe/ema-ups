@@ -1,7 +1,3 @@
-import { getConfig } from '../../scripts/ak.js';
-
-const { log } = getConfig();
-
 function getTabList(tabs, tabPanels) {
   const tabItems = tabs.querySelectorAll('li');
   const tabList = document.createElement('div');
@@ -20,7 +16,6 @@ function getTabList(tabs, tabPanels) {
     tabList.append(btn);
 
     btn.addEventListener('click', () => {
-      // Remove all active styles
       tabList.querySelectorAll('button')
         .forEach((button) => { button.classList.remove('is-active'); });
 
@@ -34,23 +29,18 @@ function getTabList(tabs, tabPanels) {
 }
 
 export default function init(el) {
-  // Find the top most parent where all tab sections live
   const parent = el.closest('.fragment-content, main');
-
-  // Forefully hide parent because sections may not be loaded yet
   parent.style = 'display: none;';
 
-  // Find the section that contains the actual block
   const currSection = el.closest('.section');
 
-  // Find the tab items
   const tabs = el.querySelector('ul');
   if (!tabs) {
-    log('Please add an unordered list to the advanced tabs block.');
+    // eslint-disable-next-line no-console
+    console.warn('Please add an unordered list to the advanced tabs block.');
     return;
   }
 
-  // Filter and format all sections that do not hold the tabs block
   const tabPanels = [...parent.querySelectorAll(':scope > .section')]
     .reduce((acc, section, idx) => {
       if (section !== currSection) {

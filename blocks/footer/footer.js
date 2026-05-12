@@ -1,14 +1,10 @@
-import { getConfig, getMetadata } from '../../scripts/ak.js';
+import { getMetadata } from '../../scripts/aem.js';
+import { locale } from '../../scripts/site-config.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 const FOOTER_PATH = '/fragments/nav/footer';
 
-/**
- * loads and decorates the footer
- * @param {Element} el The footer element
- */
 export default async function init(el) {
-  const { locale } = getConfig();
   const footerMeta = getMetadata('footer');
   const path = footerMeta || FOOTER_PATH;
   try {
@@ -25,6 +21,7 @@ export default async function init(el) {
 
     el.append(fragment);
   } catch (e) {
-    throw Error(e);
+    // eslint-disable-next-line no-console
+    console.error(e);
   }
 }
