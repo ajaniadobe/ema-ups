@@ -121,16 +121,12 @@ body {
   margin: 0;
   background-color: var(--color-background);
   color: var(--color-text);
-  font-family: tahoma, helvetica, arial, sans-serif;
+  font-family: var(--font-family);
   font-size: var(--body-font-size-m);
   font-weight: var(--body-font-weight);
   line-height: var(--body-line-height);
   padding: var(--header-height) 0 0;
   -webkit-font-smoothing: antialiased;
-
-  &.session {
-    font-family: var(--font-family);
-  }
 
   &.has-breadcrumb {
     margin: calc(var(--header-height) + var(--breadcrumb-height)) 0 0;
@@ -160,7 +156,8 @@ a {
   }
 
   /* Button base */
-  &.btn {
+  &.btn,
+  &.button {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -180,7 +177,8 @@ a {
   }
 
   /* Primary button - UPS Gold */
-  &.btn-primary {
+  &.btn-primary,
+  &.button.primary {
     color: var(--button-primary-color);
     background-color: var(--button-primary-bg);
     border: var(--button-primary-border);
@@ -192,7 +190,8 @@ a {
   }
 
   /* Secondary button - Blue outline */
-  &.btn-secondary {
+  &.btn-secondary,
+  &.button.secondary {
     color: var(--button-secondary-color);
     background-color: var(--button-secondary-bg);
     border: var(--button-secondary-border);
@@ -232,7 +231,7 @@ button:focus-visible {
 .section {
   display: block;
 
-  > .default-content {
+  > .default-content-wrapper {
     max-width: var(--grid-container-width);
     margin: 0 auto;
   }
@@ -352,9 +351,11 @@ svg {
   }
 }
 
-main > div,
-.has-template,
-div[data-status] {
+body:not(.appear) main > div {
+  display: none;
+}
+
+.has-template {
   display: none;
 }
 
