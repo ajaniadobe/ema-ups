@@ -193,13 +193,6 @@
         "multi": false
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt Text",
-        "value": ""
-      },
-      {
         "component": "richtext",
         "name": "text",
         "value": "",
@@ -271,13 +264,6 @@
         "name": "image",
         "label": "Image",
         "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
       },
       {
         "component": "richtext",
@@ -385,13 +371,6 @@
         "multi": false
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
         "component": "richtext",
         "name": "text",
         "value": "",
@@ -411,13 +390,6 @@
         "multi": false
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
         "component": "richtext",
         "name": "text",
         "value": "",
@@ -435,13 +407,6 @@
         "name": "image",
         "label": "Image",
         "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
       },
       {
         "component": "richtext",
@@ -480,13 +445,6 @@
         "name": "image",
         "label": "Background Image",
         "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt Text",
-        "value": ""
       },
       {
         "component": "richtext",

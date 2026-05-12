@@ -3,5 +3,10 @@
   "contentHostUrl": "https://author-p142404-e1461341.adobeaemcloud.com/",
   "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json",
   "previewOrg": "ajaniadobe",
-  "previewSite": "ema-ups"
+  "previewSite": "ema-ups",
+  "aemSitePath": "/content/ema-ups",
+  "aemAssetsFolderPath": "/content/dam/ema-ups",
+  "aemSiteName": "ema-ups",
+  "aemSiteTitle": "UPS (EMA)",
+  "baseUrl": "https://about.ups.com/us/en/home.html"
 }
