@@ -30,21 +30,22 @@ export async function loadFragment(path) {
 
   let sections = doc.body.querySelectorAll('main > div');
   if (!sections.length) sections = doc.body.querySelectorAll(':scope > div');
-  const fragment = document.createElement('div');
-  fragment.classList.add('fragment-content');
-  fragment.append(...sections);
 
   replaceDotMedia(path, doc);
 
   const main = document.createElement('main');
-  main.append(fragment);
+  main.append(...sections);
   decorateButtons(main);
   decorateIcons(main);
   decorateSections(main);
   decorateBlocks(main);
   await loadSections(main);
 
-  fragment.remove();
+  const fragment = document.createElement('div');
+  fragment.classList.add('fragment-content');
+  while (main.firstElementChild) {
+    fragment.append(main.firstElementChild);
+  }
   main.remove();
 
   return fragment;
