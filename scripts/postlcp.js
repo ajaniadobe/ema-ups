@@ -1,4 +1,4 @@
-import { loadBlock } from './ak.js';
+import { loadBlock } from './aem.js';
 
 export default async function loadPostLCP() {
   const header = document.querySelector('header');

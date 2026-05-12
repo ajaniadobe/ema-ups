@@ -29,7 +29,8 @@ header {
     text-decoration: none;
   }
 
-  .btn {
+  .btn,
+  .button {
     margin-block: 6px;
   }
 
@@ -78,7 +79,7 @@ header {
   .mega-menu {
     padding-bottom: var(--grid-gutter-width);
 
-    .default-content {
+    .default-content-wrapper {
       margin: 0;
 
       > :first-child {
@@ -123,7 +124,7 @@ header {
   .brand-section {
     grid-area: brand;
 
-    .default-content {
+    .default-content-wrapper {
       height: var(--header-height);
       display: flex;
       justify-content: space-between;
@@ -168,7 +169,7 @@ header {
     overflow: hidden;
     transition: all 0.2s ease-in-out;
 
-    > .default-content {
+    > .default-content-wrapper {
       display: flex;
       justify-content: end;
       align-items: center;
@@ -196,7 +197,7 @@ header {
   .main-nav-section {
     grid-area: nav;
 
-    .default-content {
+    .default-content-wrapper {
       max-width: 100%;
       margin: 0;
     }
@@ -299,7 +300,7 @@ header {
     .brand-section {
       border-bottom: initial;
 
-      .default-content {
+      .default-content-wrapper {
         max-width: initial;
         margin: 0;
       }
@@ -335,7 +336,7 @@ header {
       position: relative;
       overflow: initial;
 
-      .default-content {
+      .default-content-wrapper {
         max-width: initial;
         margin: 0;
       }

@@ -19,7 +19,7 @@ footer {
   }
 
   .section {
-    .default-content {
+    .default-content-wrapper {
       max-width: initial;
       margin: initial;
     }
@@ -58,7 +58,7 @@ footer {
     margin-bottom: 48px;
   }
 
-  .section:nth-child(2) .default-content {
+  .section:nth-child(2) .default-content-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
@@ -116,7 +116,7 @@ footer {
       justify-content: center;
     }
 
-    .section:nth-child(2) .default-content {
+    .section:nth-child(2) .default-content-wrapper {
       grid-template-columns: repeat(3, 1fr);
     }
 

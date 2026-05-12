@@ -1,4 +1,4 @@
-import { getMetadata, loadBlock } from '../ak.js';
+import { getMetadata, loadBlock } from '../aem.js';
 
 export default async function loadFooter() {
   const footer = document.querySelector('footer');

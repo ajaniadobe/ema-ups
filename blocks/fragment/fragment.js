@@ -1,4 +1,10 @@
-import { loadArea } from '../../scripts/ak.js';
+import {
+  decorateButtons,
+  decorateIcons,
+  decorateSections,
+  decorateBlocks,
+  loadSections,
+} from '../../scripts/aem.js';
 
 function replaceDotMedia(path, doc) {
   const resetAttributeBase = (tag, attr) => {
@@ -8,19 +14,6 @@ function replaceDotMedia(path, doc) {
   };
   resetAttributeBase('img', 'src');
   resetAttributeBase('source', 'srcset');
-}
-
-/**
- * Inject a fragment into the dom to for calculating styles
- * @param {HTMLElement} fragment the fragment
- */
-function applyPageStyles(fragment) {
-  const container = document.createElement('div');
-  container.classList.add('hidden-container');
-  container.style = 'display: none';
-  document.body.append(container);
-  container.append(fragment);
-  return container;
 }
 
 /**
@@ -37,33 +30,30 @@ export async function loadFragment(path) {
 
   let sections = doc.body.querySelectorAll('main > div');
   if (!sections.length) sections = doc.body.querySelectorAll(':scope > div');
-  const fragment = document.createElement('div');
-  fragment.classList.add('fragment-content');
-  fragment.append(...sections);
 
   replaceDotMedia(path, doc);
 
-  const container = applyPageStyles(fragment);
+  const main = document.createElement('main');
+  main.append(...sections);
+  decorateButtons(main);
+  decorateIcons(main);
+  decorateSections(main);
+  decorateBlocks(main);
+  await loadSections(main);
 
-  await loadArea({ area: fragment });
-
-  fragment.remove();
-  container.remove();
+  const fragment = document.createElement('div');
+  fragment.classList.add('fragment-content');
+  while (main.firstElementChild) {
+    fragment.append(main.firstElementChild);
+  }
+  main.remove();
 
   return fragment;
 }
 
-/**
- *
- * @param {Element}} a the fragment link
- * @returns the element that can be replaced
- */
 function getReplaceEl(a) {
   let current = a;
   const ancestor = a.closest('.section');
-
-  // Walk up the DOM from child to ancestor
-  // Break when there is more than one child
   while (current && current !== ancestor) {
     const childCount = current.parentElement.children.length;
     if (childCount <= 1) {
@@ -72,26 +62,20 @@ function getReplaceEl(a) {
       break;
     }
   }
-
   return current;
 }
 
 function getRequestPath(a) {
   const { hostname, pathname } = a;
   const href = a.getAttribute('href');
-  // If its already relative, return the pathname
   if (href.startsWith('/')) return pathname;
-  // If the hostname matches, return the pathname
   if (hostname === window.location.hostname) return pathname;
-  // If the aem project matches, make it relative (useful across delivery tiers)
   const isAem = ['.da.', '.aem.', 'local'].some((host) => hostname.includes(host));
   if (isAem) {
-    // If org and site matches, return the pathname
     const [aemOrg, aemSite] = hostname.split('.')[0].split('--').reverse();
     const [winOrg, winSite] = window.location.hostname.split('.')[0].split('--').reverse();
     if ((aemOrg === winOrg) && (aemSite === winSite)) return pathname;
   }
-  // Give up and return the full href
   return a.href;
 }
 
@@ -106,7 +90,6 @@ export default async function init(a) {
       ? fragment.querySelectorAll(':scope > *')
       : [fragment];
     for (const [idx, child] of children.entries()) {
-      // Create a unique ID so inserted fragments can be identified
       if (path.startsWith('/')) child.id = btoa(encodeURIComponent(`${path}/${idx + 1}`));
       elToReplace.insertAdjacentElement('afterend', child);
     }

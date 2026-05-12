@@ -1,8 +1,7 @@
-import { getConfig, getMetadata } from '../../scripts/ak.js';
+import { getMetadata } from '../../scripts/aem.js';
+import { locale } from '../../scripts/site-config.js';
 import { loadFragment } from '../fragment/fragment.js';
 import { setColorScheme } from '../section-metadata/section-metadata.js';
-
-const { locale } = getConfig();
 
 const HEADER_PATH = '/fragments/nav/header';
 const HEADER_ACTIONS = [
@@ -156,7 +155,7 @@ function decorateBrandSection(section) {
 
 function decorateNavSection(section) {
   section.classList.add('main-nav-section');
-  const navContent = section.querySelector('.default-content');
+  const navContent = section.querySelector('.default-content-wrapper');
   const navList = section.querySelector('ul');
   if (!navList) return;
   navList.classList.add('main-nav-list');
@@ -186,10 +185,6 @@ async function decorateHeader(fragment) {
   }
 }
 
-/**
- * loads and decorates the header
- * @param {Element} el The header element
- */
 export default async function init(el) {
   const headerMeta = getMetadata('header');
   const path = headerMeta || HEADER_PATH;
@@ -199,6 +194,7 @@ export default async function init(el) {
     await decorateHeader(fragment);
     el.append(fragment);
   } catch (e) {
-    throw Error(e);
+    // eslint-disable-next-line no-console
+    console.error(e);
   }
 }
