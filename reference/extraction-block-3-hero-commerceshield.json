@@ -1,0 +1,23 @@
+{
+  "blockOrder": 3,
+  "figmaName": "Hero - See risk beyond checkout",
+  "nodeId": "4305:1242",
+  "suggestedVariantName": "hero-commerceshield",
+  "childNodeId": "4068:3394",
+  "designContext": "Main Container (4068:3394): eyebrow 'CommerceShieldTM solution' (Roboto 16/24 #121212), H1 'See risk beyond checkout.' (Roboto 48/56 #121212), teal underline 72x4 #0a8080, subhead 'Spot delivery and customer experience issues before they turn into claims, cost, or support work.' (Roboto 20/32 #121212). Buttons: primary 'Talk with an Expert' (bg #0a8080, white text, pill radius 100px, h44 px24), secondary 'See How It Works' (white bg, border 2px #1966b1, text #1966b1, pill). Right side: image node 4568:362 'CommerceShield Video' 608x342 rounded 4px = 'Grow with Confidence' teal illustration. Background node 4305:1242 = subtract curved shape, gradient linear(173deg,#f3f3f3 0%,#e2ebea 100%).",
+  "assets": [
+    {
+      "url": "PENDING",
+      "nodeId": "4568:362",
+      "suggestedName": "hero-grow-with-confidence.png",
+      "usage": "content-image",
+      "context": "Right-side teal 'Grow with Confidence' illustration, 608x342"
+    }
+  ],
+  "tokens": {
+    "colors": { "heading": "#121212", "body": "#121212", "cta-primary-bg": "#0a8080", "cta-secondary-border": "#1966b1", "cta-secondary-text": "#1966b1", "underline": "#0a8080" },
+    "typography": { "eyebrow": "16px/24px Roboto", "heading": "48px/56px Roboto", "subhead": "20px/32px Roboto" },
+    "background": "linear-gradient(173deg, #f3f3f3 0%, #e2ebea 100%)"
+  },
+  "perItemVariations": null
+}

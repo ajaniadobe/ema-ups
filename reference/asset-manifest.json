@@ -1,0 +1,21 @@
+{
+  "pageName": "commerceshield",
+  "imageDirectory": "content/images/commerceshield",
+  "summary": {
+    "totalDiscovered": 6,
+    "totalDownloaded": 0,
+    "totalPending": 6,
+    "blockedBy": "Figma API 429 rate limit"
+  },
+  "assets": [
+    { "blockOrder": 3, "nodeId": "4568:362", "filename": "hero-grow-with-confidence.png", "usage": "content-image", "status": "pending", "context": "Hero right-side teal 'Grow with Confidence' illustration" },
+    { "blockOrder": 4, "nodeId": "4068:3594", "filename": "fraud-gap-flow.png", "usage": "content-image", "status": "pending", "context": "Traditional fraud tools vs the risk gap process flow diagram" },
+    { "blockOrder": 5, "nodeId": "4456:167", "filename": "risk-signals-worker.png", "usage": "content-image", "status": "pending", "context": "Warehouse worker checking a package photo" },
+    { "blockOrder": 7, "nodeId": "4359:2508", "filename": "journey-flow.png", "usage": "content-image", "status": "pending", "context": "Order-Know-Decide-Control-Recover journey flow diagram" },
+    { "blockOrder": 8, "nodeId": "4468:207", "filename": "decisions-woman-boxes.png", "usage": "content-image", "status": "pending", "context": "Person reviewing shipments among boxes photo" },
+    { "blockOrder": 12, "nodeId": "4994:753", "filename": "insights-apparel-boxes.png", "usage": "content-image", "status": "pending", "context": "Stacked cardboard shipping boxes article thumbnail" }
+  ],
+  "pendingText": [
+    { "blockOrder": 13, "item": "FAQ answer bodies (9 answers)", "reason": "Too small to read in PNG; needs get_design_context on node 4643:76 group", "status": "pending" }
+  ]
+}
